@@ -15,9 +15,9 @@ namespace ConstructorTestAnalyzer
         [InitOnly]
         public class Owner
         {
-            public int Id { get; }
+            public int Id { get; set; }
 
-            public int UserId { get; }
+            public int UserId { get; set; }
 
             public int TypeId { get; set; }
 
@@ -45,6 +45,7 @@ namespace ConstructorTestAnalyzer
 
             public string EngagementStatus { get; set; }
 
+            public Owner() {}
             public Owner(int id, int userId, bool isActive)
             {
                 Id = id;
